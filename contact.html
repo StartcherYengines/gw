@@ -1,0 +1,82 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GW Appliance & HVAC – Contact Us</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="images/logo.jpeg" alt="GW Appliance & HVAC Logo">
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="pictures.html">Pictures</a>
+                <a href="contact.html">Contact Us</a>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section style="padding:2rem;text-align:center;">
+            <h1>Contact Us</h1>
+            <p>Phone: <a href="tel:+18196399864" style="color:var(--primary-fg);">(819) 639‑9864</a></p>
+            <p>Email: <a href="mailto:gwillnoel@gmail.com" style="color:var(--primary-fg);">gwillnoel@gmail.com</a></p>
+            <p>Mailing Address:</p>
+            <address>
+                GW Mechanical<br>
+                293 Franktown Road<br>
+                Carleton Place, ON K7C 2N6
+            </address>
+        </section>
+        <form action="https://formsubmit.co/gwillnoel@gmail.com" method="POST">
+            <h2>Quick Inquiry</h2>
+            <!-- Redirect to a thank-you page after submission -->
+            <input type="hidden" name="_next" value="https://gwapplianceandhvac-f9flulhxw-gwappliance.vercel.app/thankyou.html">
+            <input type="hidden" name="_subject" value="New Service Inquiry from Website">
+            <label for="name">Name *</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="phone">Phone Number *</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <label for="address">Address *</label>
+            <input type="text" id="address" name="address" required>
+
+            <label for="applianceType">Type of Appliance *</label>
+            <select id="applianceType" name="appliance_type" required>
+                <option value="" disabled selected>Select an appliance</option>
+                <option value="Dishwasher">Dishwasher</option>
+                <option value="Refrigerator">Refrigerator</option>
+                <option value="Range/Oven">Range / Oven</option>
+                <option value="Cooktop">Cooktop</option>
+                <option value="Washer">Washer</option>
+                <option value="Dryer">Dryer</option>
+                <option value="Other">Other</option>
+            </select>
+
+            <label for="brand">Brand of Appliance *</label>
+            <input type="text" id="brand" name="brand" required>
+
+            <label for="model">Model Number (optional)</label>
+            <input type="text" id="model" name="model">
+
+            <label for="issue">Describe the Issue *</label>
+            <textarea id="issue" name="issue" rows="5" required></textarea>
+
+            <button type="submit">Send Inquiry</button>
+        </form>
+    </main>
+    <footer>
+        © <span id="year"></span> GW Appliance & HVAC • All rights reserved
+    </footer>
+    <div class="hotkeys">
+        <a href="tel:+18196399864">Call Us</a>
+        <a href="mailto:gwillnoel@gmail.com">Email Us</a>
+    </div>
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
